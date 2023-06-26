@@ -19,7 +19,8 @@ Here are some of the technologies and tools I work with:
 
 Check out some of my projects:
 
-- Calorie Tracker : Track Calorie
+- Text to Voice Generator : A text-to-voice generator using the Tacotron 2 model, an advanced machine learning-based text-to-speech synthesis model.
+- Advanced BMI Calculator : An advanced BMI (Body Mass Index) calculator implemented in Python
 
 Feel free to explore my repositories for more projects!
 
