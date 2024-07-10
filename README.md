@@ -5,7 +5,7 @@ Welcome to my GitHub profile! I'm Abhin, a researcher from India. I love to lear
 ## 🚀 About Me
 
 - 💼 Currently working as a Researcher
-- 🎓 Graduated in CS from Stanford
+- 🎓 Graduated in CS
 - 💡 Passionate about CS
 - 🌱 Always learning and seeking new challenges
 
@@ -34,6 +34,6 @@ Feel free to explore my repositories for more projects!
 
 ## 📚 Latest Blog Posts
 
-- Blog Post 1: AI War
+- Blog Post 1
 
 Check out my blog for more articles!
