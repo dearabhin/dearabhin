@@ -88,8 +88,8 @@ console.log(developer.message);
   </a>
 </div>
 <div align="center">
-  <a href="https://github.com/dearabhin/Advanced-BMI-Calculator">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=Advanced-BMI-Calculator&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="Advanced BMI Calculator" />
+  <a href="https://github.com/dearabhin/LipiPala">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=LipiPala&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="LipiPala" />
   </a>
 </div>
 
