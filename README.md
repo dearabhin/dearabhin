@@ -1,8 +1,10 @@
 # <div align="center">⚡ ABHIN KRISHNA ⚡</div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&duration=3000&color=0CF7E3&center=true&vCenter=true&random=false&width=600&height=50&lines=%3C+Researcher+%7C+Developer+%7C+Innovator+%3E;import+computer_science+as+cs;while+(true)+%7B+learn();+build();+%7D" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&duration=4000&color=0CF7E3&center=true&vCenter=true&random=false&width=600&height=50&lines=%3C+Researcher+%7C+Developer+%7C+Open-Source+Contributor+%3E;import+computer_science+as+cs" alt="Typing SVG" />
 </div>
+
+
 
 <div align="center">
   <img src="https://img.shields.io/badge/Based_in-India-FF9933?style=flat-square" alt="Location Badge" />
@@ -60,6 +62,7 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&#x26;logo=docker&#x26;logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white" alt="Cloudflare">
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&#x26;logo=amazon-aws&#x26;logoColor=white" alt="AWS">
+  <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&#x26;logo=google-colab&#x26;logoColor=white" alt="Google Colab">
   <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&#x26;logo=openai&#x26;logoColor=white" alt="ChatGPT">
   <img src="https://img.shields.io/badge/Gemini-AD89EB?style=for-the-badge&#x26;logo=google-gemini&#x26;logoColor=white" alt="Gemini">
   <img src="https://img.shields.io/badge/Grok-000000?style=for-the-badge&#x26;logo=x&#x26;logoColor=white" alt="Grok">
