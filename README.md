@@ -18,16 +18,6 @@
   </a>
 </p>
 
-## 🧠 Neural Interface
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dearabhin&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="GitHub Stats" height="180em" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dearabhin&theme=tokyonight&hide_border=true&background=0D1117&ring=0CF7E3&fire=0CF7E3&currStreakLabel=0CF7E3" alt="GitHub Streak" height="180em" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dearabhin&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&text_color=FFFFFF&layout=compact&langs_count=6" alt="Most Used Languages" height="180em" />
-</div>
 
 ## 🚀 Tech Stack
 
@@ -99,25 +89,6 @@ const developer = {
 
 console.log(developer.message);
 ```
-
-## 🔮 Featured Projects
-
-<div align="center">
-  <a href="https://github.com/dearabhin/bitchat-cli">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=bitchat-cli&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="BitChat CLI" />
-  </a>
-  <a href="https://github.com/dearabhin/Hand-Notes">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=Hand-Notes&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="Hand Notes" />
-  </a>
-</div>
-<div align="center">
-  <a href="https://github.com/dearabhin/LipiPala">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=LipiPala&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="LipiPala" />
-  </a>
-  <a href="https://github.com/dearabhin/Orbit">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dearabhin&repo=Orbit&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=0CF7E3&icon_color=0CF7E3&text_color=FFFFFF" alt="Orbit" />
-  </a>
-</div>
 
 ## 🌐 Digital Nexus
 
