@@ -100,7 +100,6 @@
   @media (max-width: 420px) {
     html, body { padding: 12px 8px; }
     .bar { height: 38px; }
-    .title { display: none; }
     .control { width: 11px; height: 11px; }
     .body { padding: 14px 12px 18px; font-size: 12.2px; line-height: 1.55; }
     .gap { margin-top: 18px; } .window { border-radius: 6px; } .lbl { min-width: 42px; }
@@ -129,7 +128,7 @@ const lines = [
   { type:'gap' },
 
   // about.me
-  { type:'prompt', cmd:'cat ',     fn:' about.me',    delay:0.7   },
+  { type:'prompt', cmd:'cat&nbsp;', fn:'about.me',    delay:0.7   },
   { type:'kv', lbl:'loc',   val:'Kochi, Kerala, India',                          delay:0.95 },
   { type:'kv', lbl:'web',   val:'abhinkrishna.com',   url:'https://www.abhinkrishna.com', delay:1.1  },
   { type:'kv', lbl:'mail',  val:'dearabhin@gmail.com', url:'mailto:dearabhin@gmail.com', delay:1.22 },
@@ -139,7 +138,7 @@ const lines = [
   { type:'gap' },
 
   // stack.txt
-  { type:'prompt', cmd:'cat ',     fn:' stack.txt',   delay:1.8   },
+  { type:'prompt', cmd:'cat&nbsp;', fn:'stack.txt',   delay:1.8   },
   { type:'raw', html:`<span class="lbl">lang</span><span class="arr">→  </span><span class="c-py">Python </span><span class="c-c">C </span><span class="c-cpp">C++ </span><span class="c-js">JavaScript </span><span class="c-ts">TypeScript </span><span class="c-html">HTML </span><span class="c-css">CSS</span>`, delay:2.05 },
   { type:'raw', html:`<span class="lbl">ai/ml</span><span class="arr">→  </span><span class="c-pt">PyTorch </span><span class="c-tf">TensorFlow </span><span class="c-hf">HuggingFace </span><span class="c-ker">Keras </span><span class="c-sk">Scikit-learn </span><span class="c-cv">OpenCV</span>`, delay:2.18 },
   { type:'raw', html:`<span class="lbl">tools</span><span class="arr">→  </span><span class="c-lx">Linux </span><span class="c-dk">Docker </span><span class="c-git">Git </span><span class="c-aws">AWS </span><span class="c-ard">Arduino </span><span class="c-nv">NVIDIA </span><span class="c-nj">Node.js </span><span class="c-re">React </span><span class="c-cf">Cloudflare</span>`, delay:2.31 },
