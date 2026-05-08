@@ -1,19 +1,5 @@
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=dearabhin&style=flat-square&color=8AB4F8&labelColor=1a1b2e&label=Profile+Views" alt="Profile Views" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="terminal.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
-</div>
-
-<br>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" />
-  </picture>
+  <a href="https://dearabhin.github.io/dearabhin/terminal.html">
+    <img src="terminal-preview.png" width="100%" alt="Interactive terminal — click to open" />
+  </a>
 </div>
