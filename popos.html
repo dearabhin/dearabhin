@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhin Krishna - Terminal Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@600&display=swap');
+
+        :root {
+            --bg-color: #1e1e2e;
+            --term-bg: #282524;
+            --term-header: #3b3836;
+            --text-main: #cdd6f4;
+            --prompt: #89b4fa;
+            --cmd: #a6e3a1;
+            --arg: #f9e2af;
+            --key: #89dceb;
+            --comment: #6c7086;
+            --red: #eb6b5b;
+            --btn-bg: #4a4643;
+            --arrow: #6c7086;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Fira Code', 'Ubuntu Mono', Consolas, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .terminal {
+            background-color: var(--term-bg);
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: var(--term-header);
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .spacer {
+            width: 58px; /* Matches the width of the controls to perfectly center title */
+        }
+
+        .title {
+            color: #a8a39d;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .control {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--btn-bg);
+        }
+
+        .control.close {
+            background-color: var(--red);
+        }
+
+        .content {
+            padding: 30px;
+            overflow-y: auto;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .block {
+            margin-bottom: 25px;
+        }
+
+        .line {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+            word-break: break-word;
+        }
+
+        .prompt { color: var(--prompt); margin-right: 8px; font-weight: 500;}
+        .cmd { color: var(--cmd); margin-right: 8px; }
+        .arg { color: var(--arg); margin-right: 8px; }
+        .key { color: var(--key); width: 60px; flex-shrink: 0; }
+        .arrow { color: var(--arrow); margin: 0 10px; }
+        .val { color: var(--text-main); }
+        .comment { color: var(--comment); margin-left: 8px; }
+        .red-text { color: var(--red); margin-right: 8px; }
+
+        a {
+            color: var(--prompt);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #b4befe;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background-color: #a8a39d;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink { 
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; } 
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .content {
+                padding: 15px;
+                font-size: 13px;
+            }
+            .key {
+                width: 45px;
+            }
+            .arrow {
+                margin: 0 5px;
+            }
+            .terminal {
+                border-radius: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal">
+        <div class="header">
+            <div class="spacer"></div>
+            <div class="title">abhin@pop-os: ~</div>
+            <div class="controls">
+                <div class="control"></div>
+                <div class="control"></div>
+                <div class="control close"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            
+            <div class="block">
+                <div class="line">
+                    <span class="prompt">❯</span>
+                    <span class="cmd">whoami</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="arg">Abhin Krishna</span>
+                    <span class="comment">- Researcher · Developer · Engineer</span>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="line">
+                    <span class="prompt">❯</span>
+                    <span class="cmd">cat</span>
+                    <span class="arg">about.me</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">loc</span><span class="arrow">→</span><span class="val">Kochi, Kerala, India</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">web</span><span class="arrow">→</span><a href="https://abhinkrishna.com" target="_blank">abhinkrishna.com</a>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">mail</span><span class="arrow">→</span><a href="mailto:dearabhin@gmail.com">dearabhin@gmail.com</a>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">build</span><span class="arrow">→</span><span class="val">butchatCLI</span><span class="comment">- Bluetooth mesh P2P secure messaging</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">focus</span><span class="arrow">→</span><span class="val">AI · BCI · EEG/EMG Signal Processing · Neurotech</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">vibe</span><span class="arrow">→</span><span class="val">Hardware × Intelligence</span>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="line">
+                    <span class="prompt">❯</span>
+                    <span class="cmd">cat</span>
+                    <span class="arg">stack.txt</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">lang</span><span class="arrow">→</span>
+                    <span class="arg">Python</span><span class="cmd">C</span><span class="red-text">C++</span><span class="arg">JavaScript</span><span class="prompt">TypeScript</span><span class="red-text">HTML</span><span class="prompt">CSS</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">ai/ml</span><span class="arrow">→</span>
+                    <span class="red-text">PyTorch</span><span class="arg">TensorFlow</span><span class="arg">HuggingFace</span><span class="red-text">Keras</span><span class="arg">Scikit-learn</span><span class="cmd">OpenCV</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="key">tools</span><span class="arrow">→</span>
+                    <span class="arg">Linux</span><span class="prompt">Docker</span><span class="red-text">Git</span><span class="arg">AWS</span><span class="cmd">Arduino</span><span class="cmd">NVIDIA</span><span class="cmd">Node.js</span><span class="prompt">React</span><span class="arg">Cloudflare</span>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="line">
+                    <span class="prompt">❯</span>
+                    <span class="cmd">./connect.sh</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="comment">[portfolio]</span><a href="https://abhinkrishna.com" target="_blank">abhinkrishna.com</a><span class="comment">↗ portfolio</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="comment">[linkedin]&nbsp;</span><a href="https://linkedin.com/in/abhin-krishna" target="_blank">linkedin.com/in/abhin-krishna</a><span class="comment">↗ professional</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="comment">[twitter]&nbsp;&nbsp;</span><a href="https://x.com/dearabhin" target="_blank">@dearabhin</a><span class="comment">↗ thoughts</span>
+                </div>
+                <div class="line" style="padding-left: 20px;">
+                    <span class="comment">[email]&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="mailto:dearabhin@gmail.com">dearabhin@gmail.com</a><span class="comment">↗ say hi</span>
+                </div>
+            </div>
+
+            <div class="line">
+                <span class="prompt">❯</span><span class="cursor"></span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
