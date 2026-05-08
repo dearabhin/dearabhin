@@ -1,136 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 498" width="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      .bg { fill: #282524; }
+      .header { fill: #3b3836; }
+      .title { fill: #a8a39d; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
+      .btn-bg { fill: #4a4643; }
+      .btn-close { fill: #eb6b5b; }
+      
+      .text { font-family: 'Fira Code', 'Ubuntu Mono', 'Courier New', monospace; font-size: 15px; }
+      .prompt { fill: #89b4fa; }
+      .cmd { fill: #a6e3a1; }
+      .arg { fill: #f9e2af; }
+      .key { fill: #89dceb; }
+      .arrow { fill: #6c7086; }
+      .val { fill: #cdd6f4; }
+      .val-highlight { fill: #cba6f7; }
+      .link { fill: #89b4fa; text-decoration: none; }
+      .comment { fill: #6c7086; }
 
-  <rect width="720" height="498" rx="13" ry="13" fill="#13141f"/>
-  <rect x="1" y="1" width="718" height="496" rx="12" ry="12" fill="#1a1b2e"/>
+      /* Continuous blinking animation for the cursor */
+      @keyframes cursor-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .blinking-cursor {
+        animation: cursor-blink 1s ease-in-out infinite;
+      }
+    </style>
+  </defs>
 
-  <rect x="1" y="1" width="718" height="44" rx="12" ry="12" fill="#23243a"/>
-  <rect x="1" y="33" width="718" height="12" fill="#23243a"/>
-  <line x1="1" y1="45" x2="719" y2="45" stroke="#2d2d4e" stroke-width="0.8"/>
+  <rect width="800" height="600" rx="8" class="bg" />
+  
+  <path d="M 0 8 A 8 8 0 0 1 8 0 L 792 0 A 8 8 0 0 1 800 8 L 800 40 L 0 40 Z" class="header" />
+  <text x="400" y="25" class="title">abhin@pop-os: ~</text>
 
-  <circle cx="666" cy="23" r="7" fill="#4a4643"/>
-  <circle cx="686" cy="23" r="7" fill="#4a4643"/>
-  <circle cx="706" cy="23" r="7" fill="#eb6b5b"/>
+  <circle cx="720" cy="20" r="7" class="btn-bg" />
+  <circle cx="745" cy="20" r="7" class="btn-bg" />
+  <circle cx="770" cy="20" r="7" class="btn-close" />
 
-  <text x="360" y="28" text-anchor="middle" fill="#4a4a6a" font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="11.5">abhin@pop-os: ~</text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5">
-    <tspan x="20" y="72" fill="#8AB4F8">❯</tspan><tspan fill="#81C995"> whoami</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5" x="32" y="94">
-    <tspan fill="#FDD663" font-weight="600">Abhin Krishna</tspan>
-    <tspan fill="#4a4a6a">  -  </tspan>
-    <tspan fill="#9aa0a6">Researcher · Developer · Engineer</tspan>
-  </text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5">
-    <tspan x="20" y="122" fill="#8AB4F8">❯</tspan>
-    <tspan fill="#81C995"> cat </tspan>
-    <tspan fill="#FDD663">about.me</tspan>
-  </text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="144">
-    <tspan fill="#6272a4">loc   </tspan><tspan fill="#44475a">→  </tspan><tspan fill="#e8eaed">Kochi, Kerala, India</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="164">
-    <tspan fill="#6272a4">web   </tspan><tspan fill="#44475a">→  </tspan>
-    <a href="https://www.abhinkrishna.com"><tspan fill="#8AB4F8" text-decoration="underline">abhinkrishna.com</tspan></a>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="184">
-    <tspan fill="#6272a4">mail  </tspan><tspan fill="#44475a">→  </tspan>
-    <a href="mailto:dearabhin@gmail.com"><tspan fill="#8AB4F8" text-decoration="underline">dearabhin@gmail.com</tspan></a>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="204">
-    <tspan fill="#6272a4">build </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#e8eaed">BitChatCLI</tspan>
-    <tspan fill="#6272a4"> - Bluetooth mesh P2P secure messaging</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="224">
-    <tspan fill="#6272a4">focus </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#e8eaed">AI · BCI · EEG/EMG Signal Processing · Neurotech</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="244">
-    <tspan fill="#6272a4">vibe  </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#e8eaed">Hardware</tspan><tspan fill="#F28B82"> ×</tspan><tspan fill="#e8eaed"> Intelligence</tspan>
-  </text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5">
-    <tspan x="20" y="271" fill="#8AB4F8">❯</tspan>
-    <tspan fill="#81C995"> cat </tspan>
-    <tspan fill="#FDD663">stack.txt</tspan>
-  </text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="293">
-    <tspan fill="#6272a4">lang  </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#FDD663">Python </tspan>
-    <tspan fill="#81C995">C </tspan>
-    <tspan fill="#F28B82">C++ </tspan>
-    <tspan fill="#FDD663">JavaScript </tspan>
-    <tspan fill="#8AB4F8">TypeScript </tspan>
-    <tspan fill="#F28B82">HTML </tspan>
-    <tspan fill="#8AB4F8">CSS</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="313">
-    <tspan fill="#6272a4">ai/ml </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#F28B82">PyTorch </tspan>
-    <tspan fill="#FDD663">TensorFlow </tspan>
-    <tspan fill="#FDD663">HuggingFace </tspan>
-    <tspan fill="#F28B82">Keras </tspan>
-    <tspan fill="#FDD663">Scikit-learn </tspan>
-    <tspan fill="#81C995">OpenCV</tspan>
-  </text>
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="333">
-    <tspan fill="#6272a4">tools </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#FDD663">Linux </tspan>
-    <tspan fill="#8AB4F8">Docker </tspan>
-    <tspan fill="#F28B82">Git </tspan>
-    <tspan fill="#FDD663">AWS </tspan>
-    <tspan fill="#81C995">Arduino </tspan>
-    <tspan fill="#81C995">NVIDIA </tspan>
-    <tspan fill="#81C995">Node.js </tspan>
-    <tspan fill="#8AB4F8">React </tspan>
-    <tspan fill="#FDD663">Cloudflare</tspan>
-  </text>
-
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5">
-    <tspan x="20" y="360" fill="#8AB4F8">❯</tspan>
-    <tspan fill="#81C995"> ./</tspan>
-    <tspan fill="#FDD663">connect.sh</tspan>
-  </text>
-
-  <a href="https://www.abhinkrishna.com">
-    <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="382">
-      <tspan fill="#6272a4">[portfolio]  </tspan>
-      <tspan fill="#8AB4F8" text-decoration="underline">abhinkrishna.com</tspan>
-      <tspan fill="#44475a">              ↗ portfolio</tspan>
+  <g class="text">
+    <text x="30" y="80">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">whoami</tspan>
     </text>
-  </a>
-  <a href="https://linkedin.com/in/abhin-krishna">
-    <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="402">
-      <tspan fill="#6272a4">[linkedin]   </tspan>
-      <tspan fill="#8AB4F8" text-decoration="underline">linkedin.com/in/abhin-krishna</tspan>
-      <tspan fill="#44475a">   ↗ professional</tspan>
+    <text x="45" y="105">
+      <tspan class="arg">Abhin Krishna</tspan> <tspan class="comment">- Researcher · Developer · Engineer</tspan>
     </text>
-  </a>
-  <a href="https://twitter.com/dearabhin">
-    <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="422">
-      <tspan fill="#6272a4">[twitter]    </tspan>
-      <tspan fill="#8AB4F8" text-decoration="underline">@dearabhin</tspan>
-      <tspan fill="#44475a">                    ↗ thoughts</tspan>
-    </text>
-  </a>
-  <a href="mailto:dearabhin@gmail.com">
-    <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="442">
-      <tspan fill="#6272a4">[email]      </tspan>
-      <tspan fill="#8AB4F8" text-decoration="underline">dearabhin@gmail.com</tspan>
-      <tspan fill="#44475a">           ↗ say hi</tspan>
-    </text>
-  </a>
 
-  <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13.5">
-    <tspan x="20" y="470" fill="#8AB4F8">❯</tspan>
-  </text>
-  <rect x="32" y="455" width="8" height="16" rx="1" fill="#8AB4F8" opacity="0.85">
-    <animate attributeName="opacity" values="0.85;0;0.85" dur="1.2s" repeatCount="indefinite"/>
-  </rect>
+    <text x="30" y="145">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">cat</tspan> <tspan class="arg">about.me</tspan>
+    </text>
+    <text x="45" y="170"><tspan class="key">loc</tspan>   <tspan class="arrow">→</tspan> <tspan class="val">Kochi, Kerala, India</tspan></text>
+    <text x="45" y="195"><tspan class="key">web</tspan>   <tspan class="arrow">→</tspan> <tspan class="link">abhinkrishna.com</tspan></text>
+    <text x="45" y="220"><tspan class="key">mail</tspan>  <tspan class="arrow">→</tspan> <tspan class="link">dearabhin@gmail.com</tspan></text>
+    <text x="45" y="245"><tspan class="key">build</tspan> <tspan class="arrow">→</tspan> <tspan class="val">butchatCLI</tspan> <tspan class="comment">- Bluetooth mesh P2P secure messaging</tspan></text>
+    <text x="45" y="270"><tspan class="key">focus</tspan> <tspan class="arrow">→</tspan> <tspan class="val">AI · BCI · EEG/EMG Signal Processing · Neurotech</tspan></text>
+    <text x="45" y="295"><tspan class="key">vibe</tspan>  <tspan class="arrow">→</tspan> <tspan class="val">Hardware × Intelligence</tspan></text>
 
+    <text x="30" y="335">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">cat</tspan> <tspan class="arg">stack.txt</tspan>
+    </text>
+    <text x="45" y="360">
+      <tspan class="key">lang</tspan>  <tspan class="arrow">→</tspan> <tspan class="arg">Python</tspan> <tspan class="cmd">C</tspan> <tspan class="btn-close">C++</tspan> <tspan class="arg">JavaScript</tspan> <tspan class="prompt">TypeScript</tspan> <tspan class="btn-close">HTML</tspan> <tspan class="prompt">CSS</tspan>
+    </text>
+    <text x="45" y="385">
+      <tspan class="key">ai/ml</tspan> <tspan class="arrow">→</tspan> <tspan class="btn-close">PyTorch</tspan> <tspan class="arg">TensorFlow</tspan> <tspan class="arg">HuggingFace</tspan> <tspan class="btn-close">Keras</tspan> <tspan class="arg">Scikit-learn</tspan> <tspan class="cmd">OpenCV</tspan>
+    </text>
+    <text x="45" y="410">
+      <tspan class="key">tools</tspan> <tspan class="arrow">→</tspan> <tspan class="arg">Linux</tspan> <tspan class="prompt">Docker</tspan> <tspan class="btn-close">Git</tspan> <tspan class="arg">AWS</tspan> <tspan class="cmd">Arduino</tspan> <tspan class="cmd">NVIDIA</tspan> <tspan class="cmd">Node.js</tspan> <tspan class="prompt">React</tspan> <tspan class="arg">Cloudflare</tspan>
+    </text>
+
+    <text x="30" y="450">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">./connect.sh</tspan>
+    </text>
+    <text x="45" y="475">
+      <tspan class="comment">[portfolio]</tspan> <tspan class="link">abhinkrishna.com</tspan> <tspan class="comment">↗ portfolio</tspan>
+    </text>
+    <text x="45" y="500">
+      <tspan class="comment">[linkedin]</tspan> <tspan class="link">linkedin.com/in/abhin-krishna</tspan> <tspan class="comment">↗ professional</tspan>
+    </text>
+    <text x="45" y="525">
+      <tspan class="comment">[twitter]</tspan> <tspan class="link">@dearabhin</tspan> <tspan class="comment">↗ thoughts</tspan>
+    </text>
+    <text x="45" y="550">
+      <tspan class="comment">[email]</tspan> <tspan class="link">dearabhin@gmail.com</tspan> <tspan class="comment">↗ say hi</tspan>
+    </text>
+    
+    <text x="30" y="590">
+      <tspan class="prompt">❯</tspan> <tspan fill="#a8a39d" class="blinking-cursor">█</tspan>
+    </text>
+  </g>
 </svg>
