@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abhin Krishna — Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0d0e1a;
+    --win-bg:    #1a1b2e;
+    --bar-bg:    #23243a;
+    --border:    #2d2d4e;
+    --blue:      #8AB4F8;
+    --green:     #81C995;
+    --yellow:    #FDD663;
+    --red:       #F28B82;
+    --muted:     #6272a4;
+    --dim:       #44475a;
+    --text:      #e8eaed;
+    --gray:      #9aa0a6;
+    --font:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    padding: 40px 20px;
+  }
+
+  /* subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(138,180,248,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(138,180,248,.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .window {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 740px;
+    border-radius: 13px;
+    background: var(--win-bg);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.06),
+      0 30px 80px rgba(0,0,0,.7),
+      0 0 120px rgba(138,180,248,.04);
+    overflow: hidden;
+    animation: rise .6s cubic-bezier(.22,1,.36,1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(28px) scale(.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* ── title bar ── */
+  .bar {
+    height: 46px;
+    background: var(--bar-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    user-select: none;
+  }
+
+  .dots { display: flex; gap: 8px; }
+  .dot {
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    transition: filter .15s;
+  }
+  .dot:hover { filter: brightness(1.15); }
+  .dot.r { background: #ff5f57; }
+  .dot.y { background: #ffbd2e; }
+  .dot.g { background: #28c840; }
+  .dot.r::after, .dot.r::before {
+    content:''; position:absolute; inset:0; margin:auto;
+    width:1px; height:8px; background:rgba(0,0,0,.4); border-radius:1px;
+  }
+  .dot.r::after { transform: rotate(45deg); }
+  .dot.r::before { transform: rotate(-45deg); }
+  .dot.y::after {
+    content:''; position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    width:7px; height:1px; background:rgba(0,0,0,.4); border-radius:1px;
+  }
+  .dot.g::after, .dot.g::before {
+    content:''; position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.4); border-radius:1px;
+  }
+  .dot.g::after  { width:7px; height:1px; }
+  .dot.g::before { width:1px; height:7px; }
+
+  .tab {
+    background: var(--win-bg);
+    border-radius: 5px;
+    padding: 4px 14px;
+    font-size: 11.5px;
+    color: var(--blue);
+    font-weight: 500;
+    letter-spacing: .3px;
+  }
+
+  .title {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .5px;
+  }
+
+  /* ── terminal body ── */
+  .body {
+    padding: 22px 24px 28px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    min-height: 420px;
+  }
+
+  .line { display: flex; align-items: baseline; flex-wrap: wrap; }
+  .line + .line { margin-top: 1px; }
+  .gap { margin-top: 14px; }
+
+  /* colors */
+  .p  { color: var(--blue); }          /* prompt ❯ */
+  .cmd{ color: var(--green); }         /* command text */
+  .fn { color: var(--yellow); }        /* filename */
+  .lbl{ color: var(--muted); min-width: 58px; display: inline-block; }
+  .arr{ color: var(--dim); }           /* → */
+  .val{ color: var(--text); }          /* values */
+  .url{ color: var(--blue); }          /* links */
+  .tag{ color: var(--muted); min-width: 120px; display: inline-block; }
+  .c-py  { color: var(--yellow); }
+  .c-c   { color: var(--green); }
+  .c-cpp { color: var(--red); }
+  .c-js  { color: var(--yellow); }
+  .c-ts  { color: var(--blue); }
+  .c-html{ color: var(--red); }
+  .c-css { color: var(--blue); }
+  .c-pt  { color: var(--red); }
+  .c-tf  { color: var(--yellow); }
+  .c-hf  { color: var(--yellow); }
+  .c-ker { color: var(--red); }
+  .c-sk  { color: var(--yellow); }
+  .c-cv  { color: var(--green); }
+  .c-lx  { color: var(--yellow); }
+  .c-dk  { color: var(--blue); }
+  .c-git { color: var(--red); }
+  .c-aws { color: var(--yellow); }
+  .c-ard { color: var(--green); }
+  .c-nv  { color: var(--green); }
+  .c-nj  { color: var(--green); }
+  .c-re  { color: var(--blue); }
+  .c-cf  { color: var(--yellow); }
+  .accent{ color: var(--red); }
+  .dim2  { color: var(--dim); }
+  .gray  { color: var(--gray); }
+  .name  { color: var(--yellow); font-weight: 600; }
+  .ar    { color: var(--dim); }
+
+  /* cursor */
+  .cursor {
+    display: inline-block;
+    width: 8px; height: 16px;
+    background: var(--blue);
+    border-radius: 1.5px;
+    vertical-align: text-bottom;
+    animation: blink 1.1s step-start infinite;
+    margin-left: 2px;
+  }
+  @keyframes blink { 0%,100%{opacity:.9} 50%{opacity:0} }
+
+  /* typing animation helpers */
+  .typed {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: type var(--dur,.6s) steps(var(--steps,30)) var(--delay,0s) forwards;
+  }
+  @keyframes type { to { width: var(--w, 100%); } }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeUp .35s ease var(--delay,0s) forwards;
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(4px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* scrollbar */
+  .body::-webkit-scrollbar { width: 6px; }
+  .body::-webkit-scrollbar-track { background: transparent; }
+  .body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* glow ring on hover */
+  .window:hover {
+    box-shadow:
+      0 0 0 1px rgba(138,180,248,.12),
+      0 30px 80px rgba(0,0,0,.7),
+      0 0 160px rgba(138,180,248,.07);
+    transition: box-shadow .4s ease;
+  }
+</style>
+</head>
+<body>
+
+<div class="window">
+
+  <!-- ── Title bar ── -->
+  <div class="bar">
+    <div class="dots">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+    </div>
+    <div class="tab">zsh — 80×24</div>
+    <div class="title">abhin@macbook ~ zsh</div>
+  </div>
+
+  <!-- ── Terminal body ── -->
+  <div class="body" id="term"></div>
+
+</div>
+
+<script>
+const term = document.getElementById('term');
+
+const lines = [
+  // whoami
+  { type:'prompt', cmd:'whoami',    fn:null,         delay:0.15  },
+  { type:'out', html:`<span class="name">Abhin Krishna</span><span class="ar">  ──  </span><span class="gray">Researcher · Developer · Engineer</span>`, delay:0.45 },
+  { type:'gap' },
+
+  // about.me
+  { type:'prompt', cmd:'cat ',     fn:'about.me',    delay:0.7   },
+  { type:'kv', lbl:'loc',   val:'Kochi, Kerala, India',                          delay:0.95 },
+  { type:'kv', lbl:'web',   val:'abhinkrishna.com',   url:'https://www.abhinkrishna.com', delay:1.1  },
+  { type:'kv', lbl:'mail',  val:'dearabhin@gmail.com', url:'mailto:dearabhin@gmail.com', delay:1.22 },
+  { type:'kv', lbl:'build', val:'butchatCLI', suffix:' — Bluetooth mesh P2P secure messaging', delay:1.34 },
+  { type:'kv', lbl:'focus', val:'AI · BCI · EEG/EMG Signal Processing · Neurotech', delay:1.46 },
+  { type:'kv', lbl:'vibe',  val:'Hardware', accent:' ×', val2:' Intelligence',    delay:1.58 },
+  { type:'gap' },
+
+  // stack.txt
+  { type:'prompt', cmd:'cat ',     fn:'stack.txt',   delay:1.8   },
+  { type:'raw', html:`<span class="lbl">lang</span><span class="arr">→  </span><span class="c-py">Python </span><span class="c-c">C </span><span class="c-cpp">C++ </span><span class="c-js">JavaScript </span><span class="c-ts">TypeScript </span><span class="c-html">HTML </span><span class="c-css">CSS</span>`, delay:2.05 },
+  { type:'raw', html:`<span class="lbl">ai/ml</span><span class="arr">→  </span><span class="c-pt">PyTorch </span><span class="c-tf">TensorFlow </span><span class="c-hf">HuggingFace </span><span class="c-ker">Keras </span><span class="c-sk">Scikit-learn </span><span class="c-cv">OpenCV</span>`, delay:2.18 },
+  { type:'raw', html:`<span class="lbl">tools</span><span class="arr">→  </span><span class="c-lx">Linux </span><span class="c-dk">Docker </span><span class="c-git">Git </span><span class="c-aws">AWS </span><span class="c-ard">Arduino </span><span class="c-nv">NVIDIA </span><span class="c-nj">Node.js </span><span class="c-re">React </span><span class="c-cf">Cloudflare</span>`, delay:2.31 },
+  { type:'gap' },
+
+  // connect.sh
+  { type:'prompt', cmd:'./',       fn:'connect.sh',  delay:2.55  },
+  { type:'link', tag:'[portfolio]',  href:'https://www.abhinkrishna.com',             label:'abhinkrishna.com',              suffix:'  ↗ portfolio',    delay:2.8  },
+  { type:'link', tag:'[linkedin]',   href:'https://linkedin.com/in/abhin-krishna',    label:'linkedin.com/in/abhin-krishna', suffix:'  ↗ professional', delay:2.92 },
+  { type:'link', tag:'[twitter]',    href:'https://twitter.com/dearabhin',            label:'@dearabhin',                    suffix:'  ↗ thoughts',     delay:3.04 },
+  { type:'link', tag:'[email]',      href:'mailto:dearabhin@gmail.com',               label:'dearabhin@gmail.com',           suffix:'  ↗ say hi',       delay:3.16 },
+  { type:'gap' },
+
+  // cursor
+  { type:'cursor', delay:3.35 },
+];
+
+function make(tag, cls, html) {
+  const el = document.createElement(tag);
+  if (cls) el.className = cls;
+  if (html !== undefined) el.innerHTML = html;
+  return el;
+}
+
+lines.forEach(l => {
+  const d = l.delay || 0;
+
+  if (l.type === 'gap') {
+    const el = make('div','gap','');
+    term.appendChild(el);
+    return;
+  }
+
+  if (l.type === 'prompt') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    row.innerHTML = `<span class="p">❯</span>&nbsp;<span class="cmd">${l.cmd}</span>${l.fn ? `<span class="fn">${l.fn}</span>` : ''}`;
+    term.appendChild(row);
+    return;
+  }
+
+  if (l.type === 'out') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    row.innerHTML = `<span style="margin-left:18px">${l.html}</span>`;
+    term.appendChild(row);
+    return;
+  }
+
+  if (l.type === 'kv') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    let inner = `<span class="lbl">${l.lbl.padEnd(5,' ')}</span><span class="arr">→  </span>`;
+    if (l.url)    inner += `<a href="${l.url}" class="url" style="text-decoration:underline;text-underline-offset:3px">${l.val}</a>`;
+    else if (l.accent) inner += `<span class="val">${l.val}</span><span class="accent">${l.accent}</span><span class="val">${l.val2||''}</span>`;
+    else if (l.suffix) inner += `<span class="url">${l.val}</span><span class="dim2">${l.suffix}</span>`;
+    else inner += `<span class="val">${l.val}</span>`;
+    row.innerHTML = `<span style="margin-left:18px;display:flex;flex-wrap:wrap;gap:0">${inner}</span>`;
+    term.appendChild(row);
+    return;
+  }
+
+  if (l.type === 'raw') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    row.innerHTML = `<span style="margin-left:18px">${l.html}</span>`;
+    term.appendChild(row);
+    return;
+  }
+
+  if (l.type === 'link') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    row.innerHTML = `<span style="margin-left:18px"><span class="tag">${l.tag.padEnd(12,' ')}&nbsp;</span><a href="${l.href}" class="url" style="text-decoration:underline;text-underline-offset:3px">${l.label}</a><span class="dim2">${l.suffix}</span></span>`;
+    term.appendChild(row);
+    return;
+  }
+
+  if (l.type === 'cursor') {
+    const row = make('div','line fade-in');
+    row.style.setProperty('--delay', d+'s');
+    row.innerHTML = `<span class="p">❯</span>&nbsp;<span class="cursor"></span>`;
+    term.appendChild(row);
+    return;
+  }
+});
+</script>
+</body>
+</html>
+
+done
