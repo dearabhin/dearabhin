@@ -19,10 +19,6 @@
   <line x1="63" y1="20.5" x2="69" y2="25.5" stroke="#14622a" stroke-width="1.2" opacity="0.4"/>
   <line x1="69" y1="20.5" x2="63" y2="25.5" stroke="#14622a" stroke-width="1.2" opacity="0.4"/>
 
-  <!-- Active tab -->
-  <rect x="85" y="13" width="110" height="20" rx="4" fill="#1a1b2e"/>
-  <text x="140" y="27" text-anchor="middle" fill="#8AB4F8" font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="11" font-weight="500">zsh — 80×24</text>
-
   <!-- Window title -->
   <text x="360" y="28" text-anchor="middle" fill="#4a4a6a" font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="11.5">abhin@macbook ~ zsh</text>
 
