@@ -5,8 +5,8 @@
 <br>
 
 <div align="center">
-  <a href="https://dearabhin.github.io/dearabhin/macos.html">
-    <img src="macos.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
+  <a href="https://dearabhin.github.io/dearabhin/popos.html">
+    <img src="popos.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
   </a>
 </div>
 
