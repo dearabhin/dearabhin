@@ -56,7 +56,7 @@
   </text>
   <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="204">
     <tspan fill="#6272a4">build </tspan><tspan fill="#44475a">→  </tspan>
-    <tspan fill="#e8eaed">butchatCLI</tspan>
+    <tspan fill="#e8eaed">BitChatCLI</tspan>
     <tspan fill="#6272a4"> — Bluetooth mesh P2P secure messaging</tspan>
   </text>
   <text font-family="'SF Mono','Fira Code',Consolas,monospace" font-size="13" x="32" y="224">
