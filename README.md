@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&height=220&text=Abhin%20Krishna&fontAlign=50&fontAlignY=52&color=gradient&customColorList=0,2,12,20,24&fontColor=ffffff&fontSize=58&desc=Researcher%20%C2%B7%20Developer%20%C2%B7%20Engineer&descAlign=50&descAlignY=70&descSize=17&animation=fadeIn" width="100%" alt="Banner" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=venom&height=220&text=Abhin%20Krishna&fontAlign=50&fontAlignY=52&color=1a1b2e&fontColor=ffffff&fontSize=58&desc=Researcher%20%C2%B7%20Developer%20%C2%B7%20Engineer&descAlign=50&descAlignY=70&descSize=17&animation=fadeIn" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=venom&height=220&text=Abhin%20Krishna&fontAlign=50&fontAlignY=52&color=gradient&customColorList=0,2,12,20,24&fontColor=ffffff&fontSize=58&desc=Researcher%20%C2%B7%20Developer%20%C2%B7%20Engineer&descAlign=50&descAlignY=70&descSize=17&animation=fadeIn" />
+    <img src="https://capsule-render.vercel.app/api?type=venom&height=220&text=Abhin%20Krishna&fontAlign=50&fontAlignY=52&color=gradient&customColorList=0,2,12,20,24&fontColor=ffffff&fontSize=58&desc=Researcher%20%C2%B7%20Developer%20%C2%B7%20Engineer&descAlign=50&descAlignY=70&descSize=17&animation=fadeIn" width="100%" alt="Banner" />
+  </picture>
 </div>
 
 <h1>
