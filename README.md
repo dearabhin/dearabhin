@@ -1,13 +1,13 @@
 <div align="center">
-  <a href="https://dearabhin.github.io">
   <img src="https://komarev.com/ghpvc/?username=dearabhin&style=flat-square&color=8AB4F8&labelColor=1a1b2e&label=Profile+Views" alt="Profile Views" />
-  </a>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="terminal.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
+  <a href="https://dearabhin.github.io">
+    <img src="terminal.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
+  </a>
 </div>
 
 <br>
