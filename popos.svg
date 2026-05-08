@@ -52,7 +52,7 @@
     <text x="45" y="170"><tspan class="key">loc</tspan>   <tspan class="arrow">→</tspan> <tspan class="val">Kochi, Kerala, India</tspan></text>
     <text x="45" y="195"><tspan class="key">web</tspan>   <tspan class="arrow">→</tspan> <tspan class="link">abhinkrishna.com</tspan></text>
     <text x="45" y="220"><tspan class="key">mail</tspan>  <tspan class="arrow">→</tspan> <tspan class="link">dearabhin@gmail.com</tspan></text>
-    <text x="45" y="245"><tspan class="key">build</tspan> <tspan class="arrow">→</tspan> <tspan class="val">butchatCLI</tspan> <tspan class="comment">- Bluetooth mesh P2P secure messaging</tspan></text>
+    <text x="45" y="245"><tspan class="key">build</tspan> <tspan class="arrow">→</tspan> <tspan class="val">BitChatCLI</tspan> <tspan class="comment">- Bluetooth mesh P2P secure messaging</tspan></text>
     <text x="45" y="270"><tspan class="key">focus</tspan> <tspan class="arrow">→</tspan> <tspan class="val">AI · BCI · EEG/EMG Signal Processing · Neurotech</tspan></text>
     <text x="45" y="295"><tspan class="key">vibe</tspan>  <tspan class="arrow">→</tspan> <tspan class="val">Hardware × Intelligence</tspan></text>
 
