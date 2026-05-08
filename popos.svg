@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      .bg { fill: #282524; }
+      .header { fill: #3b3836; }
+      .title { fill: #a8a39d; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; text-anchor: middle; }
+      .btn-bg { fill: #4a4643; }
+      .btn-close { fill: #eb6b5b; }
+      
+      .text { font-family: 'Fira Code', 'Ubuntu Mono', 'Courier New', monospace; font-size: 15px; }
+      .prompt { fill: #89b4fa; }
+      .cmd { fill: #a6e3a1; }
+      .arg { fill: #f9e2af; }
+      .key { fill: #89dceb; }
+      .arrow { fill: #6c7086; }
+      .val { fill: #cdd6f4; }
+      .val-highlight { fill: #cba6f7; }
+      .link { fill: #89b4fa; text-decoration: none; }
+      .comment { fill: #6c7086; }
+    </style>
+  </defs>
+
+  <rect width="800" height="600" rx="8" class="bg" />
+  
+  <path d="M 0 8 A 8 8 0 0 1 8 0 L 792 0 A 8 8 0 0 1 800 8 L 800 40 L 0 40 Z" class="header" />
+  <text x="400" y="25" class="title">abhin@pop-os: ~</text>
+
+  <circle cx="720" cy="20" r="7" class="btn-bg" />
+  <circle cx="745" cy="20" r="7" class="btn-bg" />
+  <circle cx="770" cy="20" r="7" class="btn-close" />
+
+  <g class="text">
+    <text x="30" y="80">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">whoami</tspan>
+    </text>
+    <text x="45" y="105">
+      <tspan class="arg">Abhin Krishna</tspan> <tspan class="comment">- Researcher · Developer · Engineer</tspan>
+    </text>
+
+    <text x="30" y="145">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">cat</tspan> <tspan class="arg">about.me</tspan>
+    </text>
+    <text x="45" y="170"><tspan class="key">loc</tspan>   <tspan class="arrow">→</tspan> <tspan class="val">Kochi, Kerala, India</tspan></text>
+    <text x="45" y="195"><tspan class="key">web</tspan>   <tspan class="arrow">→</tspan> <tspan class="link">abhinkrishna.com</tspan></text>
+    <text x="45" y="220"><tspan class="key">mail</tspan>  <tspan class="arrow">→</tspan> <tspan class="link">dearabhin@gmail.com</tspan></text>
+    <text x="45" y="245"><tspan class="key">build</tspan> <tspan class="arrow">→</tspan> <tspan class="val">butchatCLI</tspan> <tspan class="comment">- Bluetooth mesh P2P secure messaging</tspan></text>
+    <text x="45" y="270"><tspan class="key">focus</tspan> <tspan class="arrow">→</tspan> <tspan class="val">AI · BCI · EEG/EMG Signal Processing · Neurotech</tspan></text>
+    <text x="45" y="295"><tspan class="key">vibe</tspan>  <tspan class="arrow">→</tspan> <tspan class="val">Hardware × Intelligence</tspan></text>
+
+    <text x="30" y="335">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">cat</tspan> <tspan class="arg">stack.txt</tspan>
+    </text>
+    <text x="45" y="360">
+      <tspan class="key">lang</tspan>  <tspan class="arrow">→</tspan> <tspan class="arg">Python</tspan> <tspan class="cmd">C</tspan> <tspan class="btn-close">C++</tspan> <tspan class="arg">JavaScript</tspan> <tspan class="prompt">TypeScript</tspan> <tspan class="btn-close">HTML</tspan> <tspan class="prompt">CSS</tspan>
+    </text>
+    <text x="45" y="385">
+      <tspan class="key">ai/ml</tspan> <tspan class="arrow">→</tspan> <tspan class="btn-close">PyTorch</tspan> <tspan class="arg">TensorFlow</tspan> <tspan class="arg">HuggingFace</tspan> <tspan class="btn-close">Keras</tspan> <tspan class="arg">Scikit-learn</tspan> <tspan class="cmd">OpenCV</tspan>
+    </text>
+    <text x="45" y="410">
+      <tspan class="key">tools</tspan> <tspan class="arrow">→</tspan> <tspan class="arg">Linux</tspan> <tspan class="prompt">Docker</tspan> <tspan class="btn-close">Git</tspan> <tspan class="arg">AWS</tspan> <tspan class="cmd">Arduino</tspan> <tspan class="cmd">NVIDIA</tspan> <tspan class="cmd">Node.js</tspan> <tspan class="prompt">React</tspan> <tspan class="arg">Cloudflare</tspan>
+    </text>
+
+    <text x="30" y="450">
+      <tspan class="prompt">❯</tspan> <tspan class="cmd">./connect.sh</tspan>
+    </text>
+    <text x="45" y="475">
+      <tspan class="comment">[portfolio]</tspan> <tspan class="link">abhinkrishna.com</tspan> <tspan class="comment">↗ portfolio</tspan>
+    </text>
+    <text x="45" y="500">
+      <tspan class="comment">[linkedin]</tspan> <tspan class="link">linkedin.com/in/abhin-krishna</tspan> <tspan class="comment">↗ professional</tspan>
+    </text>
+    <text x="45" y="525">
+      <tspan class="comment">[twitter]</tspan> <tspan class="link">@dearabhin</tspan> <tspan class="comment">↗ thoughts</tspan>
+    </text>
+    <text x="45" y="550">
+      <tspan class="comment">[email]</tspan> <tspan class="link">dearabhin@gmail.com</tspan> <tspan class="comment">↗ say hi</tspan>
+    </text>
+    
+    <text x="30" y="590">
+      <tspan class="prompt">❯</tspan> <tspan fill="#a8a39d">█</tspan>
+    </text>
+  </g>
+</svg>
