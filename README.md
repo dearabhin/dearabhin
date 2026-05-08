@@ -6,7 +6,7 @@
 
 <div align="center">
   <a href="https://dearabhin.github.io/dearabhin/terminal.html">
-    <img src="terminal.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
+    <img src="macos.svg" width="100%" alt="Abhin Krishna — Terminal Profile" />
   </a>
 </div>
 
