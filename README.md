@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=dearabhin&style=flat-square&color=8AB4F8&labelColor=1a1b2e&label=Profile+Views" alt="Profile Views" />
+  <img 
+    src="https://gh-visitor-counter.dearabhin-7b5.workers.dev/counter?username=dearabhin&style=flat-square&color=8AB4F8&labelColor=1a1b2e&label=Profile+Views" 
+    alt="Profile Views" 
+  />
 </div>
 
 <br>
